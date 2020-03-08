@@ -1,0 +1,951 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    animation: loadFade .5s ease-out;
+  }
+
+  body {
+    font-family: 'Open Sans', sans-serif;
+    color: #343434;
+    line-height: 1.5;
+  }
+
+  a {
+    text-decoration: none;
+    color: #343434;
+  }
+  
+  .container {
+    width: 960px;
+    margin: 0 auto;
+  } 
+
+  i {
+    color: #fff;
+  }
+  /* ---------------------- Header -------------------------- */
+  #header {
+    width: 100%;
+    /* padding: 40px 0; */
+    position: relative;
+    min-height: 80vh;
+  }
+ 
+  #header nav {
+    display: flex;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+
+    
+  }
+
+  #header nav .main-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    background: #fff;
+    padding: 2rem 10rem;
+    transition: all 0.3s linear;
+    }
+  
+  nav .main-nav .nav-menu a{
+    margin-right: 50px;
+    transition: all .3s ease-in-out;
+  }
+
+  nav .main-nav .nav-menu a:hover {
+    color: #898989;
+    transition: all .3s ease-in-out;
+  }
+
+  nav .main-nav .nav-menu a:nth-child(2){
+    color: #898989;
+    transition: all .3s ease-in-out;
+  }
+
+  nav .main-nav .nav-menu a:nth-child(3){
+    color: #898989;
+  }
+  nav .main-nav .nav-menu a:nth-child(4){
+    color: #898989;
+  }
+
+  nav .main-nav .nav-menu a:nth-child(2):hover{
+    color: #343434;
+  }
+
+  nav .main-nav .nav-menu a:nth-child(3):hover{
+    color: #343434;
+  }
+
+  nav .main-nav .nav-menu a:nth-child(4):hover{
+    color: #343434;
+  }
+
+  nav.black .main-nav {
+    padding: 1rem 2rem!important;
+  }
+  
+
+  
+
+  .logo {
+    background: black;
+    padding: 10px 15px;
+    margin-left: 50px;
+  }
+
+  .logo h1{
+    font-size: 25px;
+    color: #fff;
+  }
+
+ 
+  
+  #header .hero-title {
+    padding-bottom: 60px;
+    width: 50%;
+    position: absolute;
+    top: 37%;
+    left: 17%;
+    
+  }
+
+  #header .hero-title h1 {
+    font-weight: 500;
+    font-size: 50px;
+    margin-bottom: 20px;
+    letter-spacing: 3px;
+    animation: moveToBottom .5s ease-out;
+    backface-visibility: hidden;
+  }
+
+  #header .hero-title p {
+    animation: moveToBottom .5s ease-out .75s;
+    animation-fill-mode: backwards;
+
+  }
+
+   /* ------------- Mobile Button --------------- */
+   #header nav .main-nav .menu-btn .bars{
+    width: 40px;
+    height: 3px;
+     background: #343434;
+     margin-bottom: 10px;
+   }
+   #header nav .main-nav .menu-btn {
+    font-weight: 700;
+    color: #343434;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    font-size: 1.6rem;
+    display: none;
+    cursor: pointer;
+}
+
+.mobile-menu {
+    display: none;
+    background: #fff;
+    flex-direction: column;
+    padding: 40px 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 69vh;
+    width: 50%;
+    z-index: 90;
+    transform: translate3d(-150%, 0, 0);
+    transition: all .4s ease-in-out;
+    -webkit-box-shadow: 2px 0px 78px -15px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 0px 78px -15px rgba(0,0,0,0.75);
+    box-shadow: 2px 0px 78px -15px rgba(0,0,0,0.75);
+}
+
+.mobile-menu.active {
+    transform: translate3d(0, 0, 0);
+
+}
+
+.mobile-menu a {
+    padding: 15px;
+    text-decoration: none;
+    color: black;
+}
+
+.mobile-menu a:hover {
+    text-decoration: none;
+    color: white;
+    background: #394e6e;
+}
+
+
+
+
+/* ----------------------- Portfolio --------------------- */
+
+  #portfolio {
+    background: #F0F0F0;
+    padding: 50px;
+    min-height: 63vh;
+    margin-top: -40px;
+    position: relative;
+  }
+
+  #portfolio .section-title {
+    -webkit-transform: rotate(-90deg);
+    text-transform: uppercase;
+    position: absolute;
+    top: 41%;
+    left: 13%;
+    width: 200px;
+    animation: loadFade .5s ease-out 1.8s;
+    animation-fill-mode: backwards;
+  }
+  
+  #portfolio .portfolio-title h2{
+    font-size: 20px;
+    color: #606163;
+    font-weight: 400;
+    letter-spacing: 3px;
+  }
+
+  .portfolios {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 30px;
+    padding-top: 40px;
+    transition: all 0.5s;
+    height: 100%;
+  }
+
+  .project-01 {
+    width: 460px;
+    height: 100%; 
+    animation: moveToBottom .5s ease-out 1.2s;
+    animation-fill-mode: backwards;
+  }
+
+  .project-02 {
+    width: 460px;
+    height: 100%; 
+    animation: moveToBottom .5s ease-out 1.2s;
+    animation-fill-mode: backwards;
+  }
+
+  .project-03 {
+    width: 460px;
+    height: 100%; 
+    animation: moveToBottom .5s ease-out 1.2s;
+    animation-fill-mode: backwards;
+  }
+
+  .project-04 {
+    width: 460px;
+    height: 100%; 
+    animation: moveToBottom .5s ease-out 1.2s;
+    animation-fill-mode: backwards;
+  }
+
+  .project-05 {
+    width: 460px;
+    height: 100%; 
+    animation: moveToBottom .5s ease-out 1.2s;
+    animation-fill-mode: backwards;
+  }
+
+  
+
+
+ .portfolio-img {
+    overflow: hidden;
+    width: 460px;
+    height: 320px; 
+  } 
+
+  .portfolios .portfolio-img .portfolio-01 {
+    background: url(../img/feelthewavessurf.png) center left/cover no-repeat;
+    transition: all .5s ease-in-out;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+
+  .portfolios .portfolio-img .portfolio-02 {
+    background: url(../img/shevi.jpg) center/cover no-repeat;
+    transition: all .5s ease-in-out;
+    width: 100%;
+    height: 100%; 
+    overflow: hidden;
+  }
+  
+
+  .portfolios .portfolio-img .portfolio-03 {
+    background: url(../img/lucien2.jpg) center/cover no-repeat;
+    transition: all .5s ease-in-out;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .portfolios .portfolio-img .portfolio-04 {
+    background: url(../img/html-email.PNG) center/cover no-repeat;
+    transition: all .5s ease-in-out;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .portfolios .portfolio-img .portfolio-05 {
+    background: url(../img/cat_steel1.PNG) center/cover no-repeat;
+    transition: all .5s ease-in-out;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+  }
+
+  
+  
+  .project-01 .portfolio-desc {
+    color: #898989;
+    padding-top: 15px;
+  }
+
+  .project-02 .portfolio-desc {
+    color: #898989;
+    padding-top: 15px;
+  }
+  .project-03 .portfolio-desc {
+    color: #898989;
+    padding-top: 15px;
+  }
+
+  .project-04 .portfolio-desc {
+    color: #898989;
+    padding-top: 15px;
+  }
+
+  .project-05 .portfolio-desc {
+    color: #898989;
+    padding-top: 15px;
+  }
+
+  
+
+  .project-01 .portfolio-desc h2 {
+    font-size: 19px;
+    font-weight: 400;
+  }
+
+  .project-02 .portfolio-desc h2 {
+    font-size: 19px;
+    font-weight: 400;
+  }
+
+  .project-03 .portfolio-desc h2 {
+    font-size: 19px;
+    font-weight: 400;
+  }
+
+  .project-04 .portfolio-desc h2 {
+    font-size: 19px;
+    font-weight: 400;
+  }
+
+  .project-05 .portfolio-desc h2 {
+    font-size: 19px;
+    font-weight: 400;
+  }
+
+
+  .portfolio-desc p {
+    padding-top: 8px;
+    letter-spacing: .5px;
+  }
+  .portfolio-desc a {
+    display: inline-block;
+    padding-top: 8px;
+    letter-spacing: .5px;
+    font-weight: 600;
+  }
+
+  .portfolios .portfolio-01:hover {
+    transition: all .5s ease-in-out;
+    transform: scale(1.2);
+    /* filter: none;
+      -webkit-filter: grayscale(0); */
+  }
+
+  .portfolios .portfolio-02:hover {
+    transition: all .5s ease-in-out;
+    transform: scale(1.2);
+    /* filter: none;
+      -webkit-filter: grayscale(0); */
+  }
+
+  .portfolios .portfolio-03:hover {
+    transition: all .5s ease-in-out;
+    transform: scale(1.2);
+  
+  }
+
+  .portfolios .portfolio-04:hover {
+    transition: all .5s ease-in-out;
+    transform: scale(1.2);
+  
+  }
+
+  .portfolios .portfolio-05:hover {
+    transition: all .5s ease-in-out;
+    transform: scale(1.2);
+  
+  }
+
+/* ----------------------- About ---------------------- */
+
+#about {
+  background-image: linear-gradient(to right, #5a5a5a, #5a5a5a, #5a5a5a, #595959, #595959);
+  min-height: 80vh;
+  padding-top: 120px; 
+  position: relative;
+  width: 100%;
+  padding-bottom: 122px;
+}
+#about .about-title {
+  -webkit-transform: rotate(-90deg);
+  text-transform: uppercase;
+  position: absolute;
+  top: 46%;
+  left: 14%;
+  width: 200px;
+  animation: loadFade .5s ease-out 1.8s;
+  animation-fill-mode: backwards;
+}
+
+
+#about .about-title h2{
+  font-size: 18px;
+  color: #fff;
+  font-weight: 400;
+  letter-spacing: 3px;
+}
+
+.about-01 {
+  flex: 0 0 460px;
+  height: 500px;
+  animation: moveInLeft .5s ease-out 1.2s;
+  animation-fill-mode: backwards;
+}
+
+.about-desc {
+  flex: 0 0 400px;
+  animation: moveInRight .5s ease-out 1.2s;
+  animation-fill-mode: backwards;
+}
+.about-desc h2 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.about-desc p {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: #CBCBCB;
+  padding-top: 5px;
+  font-size: 16px;
+  letter-spacing: 0.2px;
+  line-height: 1.7;
+}
+
+.about-desc .about-skills {
+  padding-top: 20px;
+}
+
+.about-desc .about-resume {
+  padding-top: 20px;
+}
+
+.about-desc .about-resume .resume-link {
+  color: #fff;
+  font-weight: 500;
+}
+
+.about-desc .underline {
+  background: #fff;
+  height: 4px;
+  width: 50px;
+  margin: 10px 0;
+}
+
+.about-me .about-01 .about-img {
+  background: url(../img/profile-pic.PNG) center/cover no-repeat;
+    transition: all .5s ease-in-out;
+    width: 100%;
+    height: 100%; 
+    /* filter: url(filters.svg#grayscale); Firefox 3.5+ */
+    filter: gray; /* IE5+ */
+    -webkit-filter: grayscale(1); /* Webkit Nightlies & Chrome Canary */
+    -webkit-transition: all .8s ease-in-out; 
+}
+
+.about-me {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+}
+
+.about-me .about-img:hover {
+  transition: all .5s ease-in-out;
+  filter: none;
+    -webkit-filter: grayscale(0);
+}
+
+
+
+/* ----------------------- Contact ---------------------- */
+
+#contact {
+  background: #201F20;
+  min-height: 40vh;
+  margin-top: -1px;
+  width: 100%;
+}
+.inner-contact {
+  animation: loadFade .5s ease-out 1.2s;
+  animation-fill-mode: backwards;
+}
+
+#contact .inner-contact .contact-email{
+  width: 42%;
+  color: #fff;
+  padding-top: 60px;
+  padding-bottom: 100px;
+}
+
+#contact .inner-contact .contact-email h1{
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+#contact .inner-contact .contact-email p {
+  font-size: 15px;
+  letter-spacing: 0.2px;
+  line-height: 1.7;
+}
+
+.contact-para1 {
+  padding-top: 20px;
+}
+
+.contact-para2 {
+  padding-top: 20px;
+}
+
+.email-link {
+  display: inline-block;
+  color: #964A22;
+  padding-top: 10px;
+}
+
+.main-contact {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #595959;
+  padding: 20px 0;
+}
+
+.main-contact .left-contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.copyright {
+  color: #fff;
+  font-size: 13px;
+
+}
+
+.main-contact .socials ul {
+  list-style: none;
+  display: flex;
+  padding-top: 15px;
+}
+
+.main-contact .socials ul li {
+  margin-right: 25px;
+  font-size: 20px;
+}
+
+.logo-contact {
+  padding: 10px 15px;
+}
+.logo-contact h1{
+  font-size: 25px;
+  color: #fff;
+}
+
+/*scroll to Top*/
+
+.scrollToTop {
+  position: fixed;
+  bottom: 80px;
+  right: 50px;
+  width: 40px;
+  line-height: 40px;
+  text-align: center;
+  background: #000;
+  color: #fff;
+  display: none;
+}
+
+.scrollToTop:hover {
+  background: rgba(0,0,0,0.5);
+}
+
+/* ------------------------- ANIMATION -------------------------------- */
+
+@keyframes moveToBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+
+
+
+@keyframes loadFade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ----------------------- Media Queries ---------------------- */
+
+
+
+@media screen and (max-width: 960px) {
+
+  nav .main-nav {
+    padding: 1rem 4rem!important;
+  }
+  .scrollToTop {
+    right: 60px;
+    bottom: 10px;
+}
+
+  nav {
+    width: 100%!important;
+  }
+  #header {
+    width: 100%;
+  }
+
+  .nav-menu ul{
+    width: 100%;
+  }
+  .section-title {
+    width: 100%;
+  }
+  #portfolio {
+    width: 100%;
+  }
+  .portfolios {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  #header .hero-title h1{
+    font-size: 35px;
+  }
+  #header .hero-title p{
+    font-size: 16px;
+  }
+
+  .portfolio-title {
+    text-align: center;
+  }
+
+  .portfolio-title h2 {
+    margin-top: -40px;
+  }
+
+  #portfolio .section-title {
+    top: 4%!important;
+    left: 37%!important;
+    padding-top: 20px;
+  }
+  .portfolios .project-01{
+    width: 100%;
+  }
+  .portfolios .project-01 .portfolio-img{
+    width: 100%;
+  }
+  .portfolios .project-02{
+    width: 100%;
+    padding-top: 53px;
+  }
+  .portfolios .project-02 .portfolio-img{
+    width: 100%;
+  }
+
+  .portfolios .project-03{
+    width: 100%;
+    padding-top: 53px;
+  }
+  .portfolios .project-03 .portfolio-img{
+    width: 100%;
+  }
+
+  .portfolios .project-04{
+    width: 100%;
+    padding-top: 53px;
+  }
+  .portfolios .project-04 .portfolio-img{
+    width: 100%;
+  }
+
+  .portfolios .project-01 .portfolio-desc{
+    width: 100%;
+    padding-left: 40px;
+  }
+  .portfolios .project-02 .portfolio-desc{
+    width: 100%;
+    padding-left: 40px;
+  }
+
+  .portfolios .project-03 .portfolio-desc{
+    width: 100%;
+    padding-left: 40px;
+  }
+
+  .portfolios .project-04 .portfolio-desc{
+    width: 100%;
+    padding-left: 40px;
+  }
+
+  #about {
+    width: 100%;
+  }
+
+  .about-title {
+    top: 5%!important;
+    left: 36%!important;
+  }
+  .about-me {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .about-me .about-01 {
+    width: 100%;
+  }
+  .about-me .about-01 .about-img{
+    width: 100%;
+  }
+
+  .about-desc {
+    padding: 20px;
+  }
+  #contact {
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .inner-contact {
+    width: 100%;
+  }
+  .contact-email {
+    width: 100%!important;
+  }
+  .main-contact {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+
+  nav .main-nav {
+    padding: 1rem 4rem!important;
+  }
+  p {
+    font-size: 14px!important;
+  }
+  .container {
+    width: 100%;
+  }
+  #header {
+    width: 100%;
+  }
+
+  #header .hero-title h1{
+    font-size: 30px;
+  }
+  #header .hero-title p{
+    font-size: 14px;
+  }
+  .nav-menu {
+    display: none;
+  }
+
+  #portfolio .section-title {
+    left: 26%!important;
+  }
+
+  nav {
+    width: 100%!important;
+  }
+  .nav-menu ul{
+    width: 100%;
+  }
+
+  #header nav .main-nav .menu-btn {
+      /* display: flex;
+      margin-right: 25px; */
+      display: flex;
+      margin-right: 25px;
+  }
+  
+  
+  .mobile-menu {
+      display: flex;
+  }
+
+  #about {
+    padding-bottom: 12px;
+  }
+
+  #about .section-title {
+    top: 5%!important;
+    left: 34%!important;
+    padding-bottom: 146px;
+}
+
+#contact {
+  width: 100%;
+  padding: 0 20px;
+}
+
+.inner-contact {
+  width: 100%;
+}
+
+.contact-email {
+  width: 100%!important;
+}
+.main-contact {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-contact .left-contact {
+  margin-left: -34px!important;
+}
+
+.socials {
+  margin-left: 92px!important;
+}
+
+
+  
+}
+
+/* ----------------------- Other Media Queries---------------------- */ 
+
+@media screen and (max-width: 1620px) {
+  #portfolio .section-title {
+    left: 6%;
+    margin-top: -24px;
+  }
+  #about .section-title {
+    left: 6%;
+  }
+}
+
+@media screen and (max-width: 1374px) {
+  #portfolio .section-title {
+    -webkit-transform: rotate(0);
+    top: 6%;
+    left: 44%;
+
+  }
+  #about .section-title {
+    -webkit-transform: rotate(0);
+    top: 6%;
+    left: 44%;
+  }
+
+  #portfolio {
+    padding: 63px 0;
+}
+  
+}
+
+@media screen and (max-width: 1270px) {
+
+  #header nav {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1140px) {
+
+  #header nav {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1008px) {
+
+  #header nav {
+    width: 100%;
+  }
+}
+
